@@ -1,6 +1,22 @@
-<h1>Eat Da Burger</h1>
 
-<h2>Burgers</h2>
+<div class="jumbotron" id="burger">
+  <h1>Eat Da Burger!</h1>
+  
+
+  <form class="burger-form">
+    <h2>Add a Burger</h2>
+    <div class="form-group">
+      <label for="burgerAdd">Burger Name:</label>
+      <input type="text" id="burgerAdd" name="burger_name">
+      <br><br>
+      <button type="submit">Add Burger!</button>
+    </div>
+  
+  </form>
+
+</div>
+
+<h2>Burgers:</h2>
 <ul>
   {{#each burgers}}
      {{#unless devoured}}
@@ -19,17 +35,5 @@
 </ul>
 
 
-<h2>Add a Burger</h2>
 
-<form class="burger-form">
-
-{{!-- </form> action='/burgers/update/{{this.id}}?_method=PUT" method="POST"'> --}}
-  <div class="form-group">
-    <label for="burgerAdd">Burger Name:</label>
-    <input type="text" id="burgerAdd" name="burger_name">
-    <br><br>
-    <button type="submit">Add Burger!</button>
-  </div>
-  
-</form>
 

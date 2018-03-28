@@ -1,0 +1,96 @@
+* {
+   text-align: center; 
+   margin: 0 auto;
+}
+
+.form-group input {
+    color: red;
+}
+
+#burger {
+    background-image: url("../images/BurgerStack.jpg");
+    height: 500px;
+    margin: 0 50px;
+}
+
+.container {
+    background-color: hotpink;
+}
+
+.container .jumbotron {
+    padding-top: 25px;
+}
+
+.container .jumbotron h1, .container h2, form {
+    color: white;
+    font-weight: bolder;
+    text-shadow: 4px 4px 4px magenta;
+}
+
+.container .jumbotron h1 {
+    font-size: 100px;
+    background-color: hotpink;
+    margin-top: 30px;
+    opacity: .96;
+}
+
+.burger-form {
+    background-color: hotpink;
+    padding: 10px;
+    margin-top: 60px;
+    opacity: .96;
+}
+
+ul .jumbotron {
+    width: 600px;
+    height: 100px;
+}
+
+.jumbotron button, button {
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+}
+
+.jumbotron li {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.jumbotron li button {
+    font-size: 15px;
+}
+
+
+
+/* @media (max-width: 1200px){
+    body .container {
+    width: 1270px;
+    }
+} */
+@media(max-width:992px){
+   form h2 {
+       margin-top: -5px;
+   }
+   form {
+       margin-bottom: -5px;
+   }
+}
+
+@media(max-width:680px){
+    ul .jumbotron {
+        width: 400px;
+    }
+    .jumbotron li {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:480px){
+    .container .jumbotron h1 {
+        font-size: 30px;
+    }
+    ul .jumbotron {
+        width: 250px;
+    }
+}

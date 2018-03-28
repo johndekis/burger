@@ -1,5 +1,7 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
+
 $(function() {
+  
     $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
       var newDevour = $(this).data("new-devour");
@@ -25,6 +27,10 @@ $(function() {
     $(".burger-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
+      if($("#burgerAdd").val().trim() === ""){
+        console.log("no text in burger add");
+        swal("Can't add a nothing burger! Give it a NAME homie");
+      } else{
   
       var newBurger = {
         burger_name: $("#burgerAdd").val().trim(),
@@ -42,6 +48,7 @@ $(function() {
           location.reload();
         }
       );
+    }
     });
   
     $(".delete-burger").on("click", function(event) {
