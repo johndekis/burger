@@ -13,8 +13,7 @@ function printQuestionMarks(num) {
   
 // Helper function to convert object key/value pairs to SQL syntax
 function objToSql(ob) {
-    var arr = [];
-  
+    var arr = [];  
     // loop through the keys and push the key/value as a string int arr
     for (var key in ob) {
       var value = ob[key];
@@ -24,21 +23,19 @@ function objToSql(ob) {
         if (typeof value === "string" && value.indexOf(" ") >= 0) {
           value = "'" + value + "'";
         }
-        // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-        // e.g. {sleepy: true} => ["sleepy=true"]
         arr.push(key + "=" + value);
       }
     }
-  
     // translate array of strings to a single comma-separated string
     return arr.toString();
 }
 
 
 var orm = {
-//============================
-//          METHODS
-//============================
+//======================================
+//              METHODS
+//======================================
+
     selectAll : function(tableInput, cb){
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, result) {
@@ -67,7 +64,6 @@ var orm = {
         
             cb(result);
             });
-    //console.log("insertOne!");
     },
     updateOne : function(table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;

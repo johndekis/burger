@@ -1,7 +1,6 @@
 
 <div class="jumbotron" id="burger">
-  <h1>Eat Da Burger!</h1>
-  
+  <h1>Eat Da Burger!</h1>  
 
   <form class="burger-form">
     <h2>Add a Burger</h2>
@@ -10,29 +9,31 @@
       <input type="text" id="burgerAdd" name="burger_name">
       <br><br>
       <button type="submit">Add Burger!</button>
-    </div>
-  
+    </div>  
   </form>
-
 </div>
 
-<h2>Burgers:</h2>
-<ul>
-  {{#each burgers}}
-     {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<div>
+  <h2>Burgers:</h2>
+  <ul>
+    {{#each burgers}}
+      {{#unless devoured}}
+        {{> burgers/burger-block devoured=true}}
+      {{/unless}}
+    {{/each}}
+  </ul>
 
-<h2>Devoured Burgers!</h2>
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}  	    
-    {{/if}}
-  {{/each}}
-</ul>
+  <h2>Devoured Burgers!</h2>
+  <ul>
+    {{#each burgers}}
+      {{#if devoured}}
+        {{> burgers/burger-block devoured=false}}  	    
+      {{/if}}
+    {{/each}}
+  </ul>
+</div>
+
+
 
 
 

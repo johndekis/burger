@@ -1,4 +1,3 @@
-//export connection
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
@@ -16,5 +15,5 @@ var connection = mysql.createConnection({
     }
     console.log("connected as id " + connection.threadId);
   });
-
+//export connection
   module.exports = connection;
