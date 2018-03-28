@@ -1,8 +1,6 @@
 //require connection
 var connection = require("../config/connection.js");
 
-
-
 function printQuestionMarks(num) {
     var arr = [];
   
@@ -35,6 +33,7 @@ function objToSql(ob) {
     // translate array of strings to a single comma-separated string
     return arr.toString();
 }
+
 
 var orm = {
 //============================
@@ -75,6 +74,7 @@ var orm = {
 
         queryString += " SET ";
         queryString += objToSql(objColVals);
+        console.log(objColVals);
         queryString += " WHERE ";
         queryString += condition;
 
